@@ -23,7 +23,7 @@ def load_llm():
     print("LLAMA LOADED SUCCESSFULLY!!")
     return llm
 
-file_path = "data.csv"  # Replace this with your actual file path
+file_path = "data.csv" 
 
 if os.path.exists(file_path):
     loader = CSVLoader(file_path=file_path, encoding="utf-8", csv_args={'delimiter': ','})
@@ -46,10 +46,10 @@ if os.path.exists(file_path):
         st.session_state['history'] = []
 
     if 'generated' not in st.session_state:
-        st.session_state['generated'] = ["Hello! Ask me anything about " + os.path.basename(file_path) + " 🤗"]
+        st.session_state['generated'] = ["Hello! Ask me anything about " + os.path.basename(file_path) + " "]
 
     if 'past' not in st.session_state:
-        st.session_state['past'] = ["Hey! 👋"]
+        st.session_state['past'] = ["Hey!"]
         
     # Container for the chat history
     response_container = st.container()
@@ -58,7 +58,7 @@ if os.path.exists(file_path):
 
     with container:
         with st.form(key='my_form', clear_on_submit=True):
-            user_input = st.text_input("Query:", placeholder="Talk to your csv data here (:", key='input')
+            user_input = st.text_input("Query:", placeholder="Query (:", key='input')
             submit_button = st.form_submit_button(label='Send')
             
         if submit_button and user_input:
