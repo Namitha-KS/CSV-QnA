@@ -11,7 +11,7 @@ Provided dataset on Computer hardwares is integrated with a locally running LLM
 
 ## Tech Stack
 
-- [CTransformers](https://github.com/marella/ctransformers)
+- [CTransformers](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
 - [Llama2 Quantised Model](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML)
 - [FAISS](https://github.com/facebookresearch/faiss)
 - [Streamlit](https://streamlit.io/)
